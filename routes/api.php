@@ -14,5 +14,5 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', \Runline\ProfileTool\Http\Controllers\ToolController::class . '@index');
-Route::post('/', \Runline\ProfileTool\Http\Controllers\ToolController::class . '@store');
+Route::get('/', \Runline\ProfileTool\Http\Controllers\ToolController::class . '@index')->name('nova-profile-tool.index');
+Route::post('/', \Runline\ProfileTool\Http\Controllers\ToolController::class . '@store')->name('nova-profile-tool.store');

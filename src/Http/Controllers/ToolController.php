@@ -15,7 +15,7 @@ class ToolController extends Controller
         foreach(config('nova-profile-tool.fields') as $field ) {
 
           if(!is_null($field['value'])) {
-              $field['value'] = auth()->user()->{$field['value']};
+              $field['value'] = auth()->user()->{$field['value']} ?? $field['value'];
           }
 
           $field['name'] = ucfirst(__("validation.attributes." . $field['attribute']));
